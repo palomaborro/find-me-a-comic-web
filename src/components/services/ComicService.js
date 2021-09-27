@@ -1,5 +1,5 @@
 import http from './BaseService';
 
 export const getComics = () => {
-    return http.get('/comics')
+    return http.get('/new')
 }

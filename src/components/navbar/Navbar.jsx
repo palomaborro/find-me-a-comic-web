@@ -8,23 +8,21 @@ export default function Navbar() {
       <Link
               to="/"
               className="Navbar__logo"
-              exact
               >
               <Logo />
       </Link>
       <ul>
         <li>
             <Link
-              to="/comics"
+              to="/new"
               className="Navbar__content__link"
-              >Comics
+              >New
             </Link>
         </li>
         <li>
             <Link
               to="/lists"
               className="Navbar__content__link"
-                exact
             >Lists
             </Link>
         </li>

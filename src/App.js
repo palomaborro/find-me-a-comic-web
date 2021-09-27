@@ -13,10 +13,10 @@ export default function App() {
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route exact path='/comics'>
+        <Route exact path='/new'>
           <ComicList />
         </Route>
-        <Route exact path='/comics/:comicId'>
+        <Route exact path='/new/:id'>
           <ComicDetail />
         </Route>
       </Switch>
