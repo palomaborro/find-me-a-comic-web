@@ -1,0 +1,55 @@
+.Home__container__header {
+    background: url('../../assets/home/homeBackground.jpg') no-repeat center fixed; 
+    background-size: cover;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgba(88, 88, 88, 0.589);
+    background-blend-mode: multiply;
+    padding: 120px 0;
+}
+
+.Home__container__header h1 {
+    display: flex;
+    color: white;
+    padding-left: 50px;
+    align-content: center;
+    justify-content: center;
+    font-weight: 300;
+}
+
+.Home__container__header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home__container__header a {
+    display: block;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+  
+  .Home__container__header a:hover{
+    color: rgb(138, 138, 138);
+  }
+
+.Home ul {
+    margin-top: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 250px;
+    padding-right: 250px;
+    font-size: 30px;
+}
+
+.Home li {
+    margin-bottom: 20px;
+}
+
+.Home li p {
+    color:#802A41;
+}

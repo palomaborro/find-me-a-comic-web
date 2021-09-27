@@ -15,9 +15,9 @@ export default function Navbar() {
       <ul>
         <li>
             <Link
-              to="/new"
+              to="/comics"
               className="Navbar__content__link"
-              >New
+              >Comics
             </Link>
         </li>
         <li>

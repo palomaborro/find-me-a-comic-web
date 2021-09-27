@@ -2,8 +2,8 @@
   background-color: #333333;
   display: flex;
   align-items: center;
+  font-weight: 700;
   font-size: 20px;
-  font-weight: bold;
   padding-left: 250px;
   padding-right: 250px;
 }
@@ -14,16 +14,26 @@
    list-style-type: none;
    display: flex;
    align-items:center;
+   justify-content: space-between;
+ }
+
+ .Navbar ul a:hover, a:focus {
+  background-color: #272727;
  }
 
  .Navbar__logo {
   display: block;
-  padding: 0 24px;
-  font-size: 24px;
+  padding: 24px;
 }
 
 .Navbar__content__link {
   color: #e7e7e7;
-  padding: 24px;
+  padding: 32px;
   display: block;
 }
+
+a {
+  color: #e7e7e7;
+  text-decoration: none;
+}
+
