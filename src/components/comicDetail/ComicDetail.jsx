@@ -18,12 +18,12 @@ export default function ComicDetail() {
 
     return (
         <div className='ComicDetail'>
-            <img src={comic.image.original_url} alt="" />
+            {/* <img src={comic.image.original_url} alt="" />
             <div className='ComicDetail__info'>
                 <h2>{comic.name} #{comic.issue_number}</h2>
                 <p>Published: {comic.cover_date}</p>
                 <p>{comic.description}</p>
-            </div>
+            </div> */}
         </div>
     );
 };
