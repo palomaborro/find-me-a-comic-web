@@ -8,16 +8,24 @@ import Loader from "react-loader-spinner";
 export default function ComicList() {
   const [comics, setComics] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   // const [page, setPage] = useState(0);
 
   useEffect(() => {
     getComics().then((res) => {
       setComics(res.results);
       setLoading(false)
+    })
+    .catch(() => {
+      setError(true)
     });
   }, []);
 
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
+
+  if (error) {
+    return <h1>There was an error with the API</h1>
+  }
 
   return (
     <div className="ComicList">

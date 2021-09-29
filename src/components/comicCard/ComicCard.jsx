@@ -7,8 +7,7 @@ export default function ComicCard({ volume, image, issue_number, id }) {
       <Link to={`/new/${id}`}>
         <img className="ComicCard__image" src={image.original_url} alt="" />
         <div className="ComicCard__info">
-          <p className='ComicCard__info__name'>{volume.name}</p>
-          <p className='ComicCard__info__issue'>Issue #{issue_number}</p>
+          <p className='ComicCard__info__name'>{volume.name} #{issue_number}</p>
         </div>
       </Link>
     </div>

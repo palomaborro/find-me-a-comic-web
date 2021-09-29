@@ -4,8 +4,8 @@
   align-items: center;
   font-weight: 700;
   font-size: 20px;
-  padding-left: 270px;
-  padding-right: 250px;
+  padding-left: 400px;
+  padding-right: 400px;
 }
 
 .Navbar ul {
@@ -17,7 +17,7 @@
    justify-content: space-between;
  }
 
- .Navbar ul a:hover, a:focus {
+ .Navbar ul a:hover {
   background-color: #272727;
  }
 

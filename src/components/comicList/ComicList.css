@@ -1,8 +1,8 @@
 .ComicList {
     display: flex;
     flex-direction: column;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 .ComicList__container {

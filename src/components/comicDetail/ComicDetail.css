@@ -1,0 +1,72 @@
+.ComicDetail__body {
+    display: flex;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 70px;
+}
+
+.ComicDetail__body__image img {
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px -7px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+}
+
+.ComicDetail__body__image button {
+    width: fit-content;
+}
+
+.ComicDetail__body__image {
+    display:flex;
+    flex-direction: column;
+}
+
+.ComicDetail__body__info h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.ComicDetail__body__info__description p {
+    margin-bottom: 50px;
+}
+
+.ComicDetail__body__info__description em {
+    font-style: normal;
+}
+
+.ComicDetail__body__info__description h4 {
+    margin-bottom: 20px;
+}
+
+.ComicDetail__body__info__description table {
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.ComicDetail__body__info__description thead {
+    background-color: rgb(221, 221, 221);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.ComicDetail__body__info__description th {
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.ComicDetail__body__info__description tbody {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.ComicDetail__body__info__description td {
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.ComicDetail__body__info__description a {
+    color: black;
+}
