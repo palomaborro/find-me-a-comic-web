@@ -24,7 +24,12 @@ export default function ComicList() {
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
 
   if (error) {
-    return <h1>There was an error with the API</h1>
+    return(
+    <div className='ComicList__error'>
+      <h1 >Sorry, there was an error with the API</h1>
+      <img src="https://c.tenor.com/-Qs0HrNLF0AAAAAC/wait-what-spider-man.gif" alt="" />
+    </div>
+    )
   }
 
   return (
