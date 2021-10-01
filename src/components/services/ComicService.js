@@ -1,4 +1,6 @@
-import http from './BaseService';
+import { create } from './BaseService';
+
+const http = create();
 
 export const getComics = () => {
     return http.get('/new')

@@ -33,6 +33,13 @@ export default function Navbar() {
               >My Collection
             </Link>
         </li>
+        <li>
+            <Link
+              to="/login"
+              className="Navbar__content__link"
+              >Log in
+            </Link>
+        </li>
       </ul>
     </nav>
   );

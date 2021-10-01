@@ -3,6 +3,7 @@ import './App.css';
 import ComicDetail from './components/comicDetail/ComicDetail';
 import ComicList from './components/comicList/ComicList';
 import Home from './components/home/Home';
+import Login from './components/login/Login';
 import Navbar from './components/navbar/Navbar';
 
 export default function App() {
@@ -10,6 +11,9 @@ export default function App() {
     <div className="App">
       <Navbar />
       <Switch>
+        <Route path='/login'>
+          <Login />
+        </Route>
         <Route exact path='/'>
           <Home />
         </Route>
