@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
+import './Login.css'
 
 export default function Login() {
   const [credentials, setCredentials] = useState({
@@ -30,27 +32,33 @@ export default function Login() {
 
   return (
     <div className="Login">
-        {error && 
-        <p>There was an error: {error}</p>} 
-
       <form onSubmit={doLogin}>
-        <label htmlFor="email">Email</label>
+      {error && 
+        <p>There was an error: {error}</p>}
+        <label htmlFor="email">Email:</label>
         <input
+          className='Login__email'
+          placeholder='friendlyspidey@gmail.com'
           name="email"
           id="email"
           value={credentials.email}
           onChange={onChange}
         />
 
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Password:</label>
         <input
+          className='Login__password'
+          placeholder='peterparker123'
           name="password"
           id="password"
+          type='password'
           value={credentials.password}
           onChange={onChange}
         />
 
-        <button type="submit">Log in</button>
+        <button type="submit">Login</button>
+        <br />
+      <Link className='Login__signup' to='/signup'>Or sign up here</Link>
       </form>
     </div>
   );

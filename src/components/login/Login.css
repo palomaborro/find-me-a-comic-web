@@ -1,0 +1,74 @@
+.Login {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom: 30vh;
+}
+
+.Login form {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+}
+
+.Login form label {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.Login__email {
+    margin-bottom: 30px;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.Login__password {
+    margin-bottom: 10px;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.Login form button {
+    font-family: 'Rubik', sans-serif;
+    transition: all .4s ease;
+    color: #e7e7e7;
+    border: 1px solid #333333;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    background-color : #333333;
+    padding: 10px 5px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Login form button:hover{
+    color: #333333;
+    background-color: transparent;
+}
+
+.Login__signup {
+    transition: all .4s ease;
+    color: #e7e7e7;
+    border: 1px solid #333333;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    background-color : #333333;
+    padding: 10px 5px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #333333;
+    background-color: transparent;
+}

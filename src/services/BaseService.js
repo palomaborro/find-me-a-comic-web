@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getAccessToken } from "../../store/AccessTokenStore";
+import { getAccessToken } from "../store/AccessTokenStore";
 
 
 export const create = (useAccessToken = true) => {

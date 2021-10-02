@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ComicCard from "../comicCard/ComicCard";
-import { getComics } from "../services/ComicService";
+import { getComics } from "../../services/ComicService";
 import "./ComicList.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";

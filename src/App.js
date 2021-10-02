@@ -14,6 +14,9 @@ export default function App() {
         <Route path='/login'>
           <Login />
         </Route>
+        <Route path='/signup'>
+          <SignUp />
+        </Route>
         <Route exact path='/'>
           <Home />
         </Route>

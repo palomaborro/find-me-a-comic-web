@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getComic } from "../services/ComicService";
+import { getComic } from "../../services/ComicService";
 import "./ComicDetail.css";
 import Loader from "react-loader-spinner";
 import "./ComicDetail.css";

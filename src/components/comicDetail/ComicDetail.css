@@ -1,8 +1,6 @@
 .ComicDetail__body {
     display: flex;
-    margin-left: 400px;
-    margin-right: 400px;
-    margin-top: 70px;
+    margin: 70px 400px;
 }
 
 .ComicDetail__body__image img {
@@ -13,7 +11,24 @@
 }
 
 .ComicDetail__body__image button {
+    transition: all .4s ease;
+    color: #e7e7e7;
+    border: 1px solid #333333;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    background-color : #333333;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
     width: fit-content;
+}
+
+.ComicDetail__body__image button:hover {
+    color: #333333;
+    background-color: transparent;
 }
 
 .ComicDetail__body__image {
@@ -39,22 +54,26 @@
 }
 
 .ComicDetail__body__info__description table {
-    display: flex;
     flex-direction: column;
     border: 1px rgb(187, 187, 187) solid;
     border-radius: 5px;
     width: fit-content;
+    border-collapse: collapse;
 }
 
 .ComicDetail__body__info__description thead {
     background-color: rgb(221, 221, 221);
     text-align: left;
     vertical-align: middle;
+    justify-content: space-between;
+}
+
+.ComicDetail__body__info__description th:last-child {
+    text-align: center;
 }
 
 .ComicDetail__body__info__description th {
-    padding-right: 30px;
-    padding-bottom: 10px;
+    padding: 5px 10px;
 }
 
 .ComicDetail__body__info__description tbody {
@@ -62,9 +81,12 @@
     vertical-align: middle;
 }
 
+.ComicDetail__body__info__description td:last-child {
+    text-align: center;
+}
+
 .ComicDetail__body__info__description td {
-    padding-right: 30px;
-    padding-bottom: 10px;
+    padding: 5px 10px;
 }
 
 .ComicDetail__body__info__description a {

@@ -1,21 +1,19 @@
 .Navbar {
   background-color: #333333;
   display: flex;
-  align-items: center;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 18px;
   padding-left: 400px;
   padding-right: 400px;
 }
 
-.Navbar ul {
+.Navbar__links{
    margin: 0;
    padding: 0;
    list-style-type: none;
    display: flex;
    align-items:center;
-   justify-content: space-between;
- }
+  }
 
  .Navbar ul a:hover {
   background-color: #272727;
@@ -23,13 +21,12 @@
 
  .Navbar__logo {
   display: block;
-  padding: 24px;
+  padding: 15px;
 }
 
 .Navbar__content__link {
   color: #e7e7e7;
-  padding: 32px;
-  display: block;
+  padding: 24px;
 }
 
 a {
@@ -37,3 +34,18 @@ a {
   text-decoration: none;
 }
 
+.Navbar__content__button {
+  background-color: transparent;
+  border: none;
+  color: #e7e7e7;
+  padding: 24px;
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+}
+
+.Navbar__content__button:hover {
+  background-color: #272727;
+}
