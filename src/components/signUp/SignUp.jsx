@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
-import './Login.css'
+import { createUser } from "../../services/UserService";
+import './SignUp.css'
 
 export default function SignUp() {
   const [user, setUser] = useState({
@@ -14,15 +14,27 @@ export default function SignUp() {
   const { replace } = useHistory();
 
   const onChange = (event) => {
-    setUser((oldValue) => ({
+    setUser((oldValue) => {
+      const value = event.target.type === 'file' ? event.target.files[0] : event.target.value;
+      return {
       ...oldValue,
-      [event.target.name]: event.target.value,
-    }));
+      [event.target.name]: value
+    }});
   };
 
   const doRegister = (event) => {
     event.preventDefault();
 
+    const formData = new FormData();
+    Object.keys(user).forEach((key) => {
+      formData.append(key, user[key])
+    });
+
+    createUser(formData)
+    .then(() => {
+      replace('/login')
+    })
+    .catch((error) => setError(error.response.data.message))
   }
 
   return (
@@ -67,8 +79,8 @@ export default function SignUp() {
           className='SignUp__image'
           name="image"
           id="image"
-          type='image'
-          value={user.image}
+          type='file'
+          alt=''
           onChange={onChange}
         />
 

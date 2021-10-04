@@ -32,7 +32,7 @@ export default function ComicDetail() {
 
 if (error) {
     return (
-      <div className='ComicList__error'>
+      <div className='newComicsList__error'>
       <h1 >Sorry, there was an error</h1>
       <img src="https://c.tenor.com/-Qs0HrNLF0AAAAAC/wait-what-spider-man.gif" alt="" />
       </div>

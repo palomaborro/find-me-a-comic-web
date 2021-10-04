@@ -8,18 +8,18 @@ export default function Home() {
             <div className='Home__container'>
                 <div className='Home__container__header'>
                     <h1>Find, recommend and organize your comic collection in just one place</h1>
-                    <div><Link to={'/'}><span>JOIN</span></Link></div>
+                    <div className='Home__container__header__button'><Link to={'/login'}><span>JOIN</span></Link></div>
                 </div>
-                <div className='Home__container__description'>
+                <div>
                     <ul>
                         <li>
-                            Dont miss anything! <p>Find the new releases</p>
+                            <p>Dont miss anything!</p><br />Find all the new releases
                         </li>
                         <li>
-                            Be a part of the community! <p>Recommend, share and rate your favorite comics</p>
+                            <p>Be a part of the community!</p><br />Share and rate your favorite comics
                         </li>
                         <li>
-                            Control everything! <p>We organize your collection for you</p>
+                            <p>Control everything!</p><br />We organize your collection for you
                         </li>
                     </ul>
                 </div>

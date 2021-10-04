@@ -1,0 +1,81 @@
+.SignUp {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom: 30vh;
+}
+
+.SignUp form {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+}
+
+.SignUp form label {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.SignUp__email {
+    margin-bottom: 30px;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.SignUp__password {
+    margin-bottom: 30px;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.SignUp__name {
+    margin-bottom: 30px;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.SignUp__image {
+    margin-bottom: 10px;
+    padding: 10px 5px;
+}
+
+.SignUp__image button {
+    transition: all .4s ease;
+    color: #e7e7e7;
+    border: 1px solid #333333;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    background-color : #333333;
+    padding: 10px 5px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.SignUp form button {
+    font-family: 'Rubik', sans-serif;
+    transition: all .4s ease;
+    color: #e7e7e7;
+    border: 1px solid #333333;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    background-color : #333333;
+    padding: 10px 5px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.SignUp form button:hover{
+    color: #333333;
+    background-color: transparent;
+}
