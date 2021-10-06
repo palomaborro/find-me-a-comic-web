@@ -1,0 +1,48 @@
+.CommentForm__form  form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.CommentForm__form button {
+    transition: all .4s ease;
+    color: #e7e7e7;
+    border: 1px solid #333333;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    background-color : #333333;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.CommentForm__form button:hover {
+    color: #333333;
+    background-color: transparent;
+}
+
+.CommentForm__form textarea {
+    height: 10vh;
+    width: 45vh;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.CommentForm {
+    display:flex;
+}
+
+.CommentForm img {
+    object-fit: cover;
+    height: 10vh;
+    border-radius: 5px;
+    margin-right: 5px;
+}

@@ -1,16 +1,16 @@
-.ComicDetail__body {
+.NewComicDetail__body {
     display: flex;
     margin: 70px 400px;
 }
 
-.ComicDetail__body__image img {
+.NewComicDetail__body__image img {
     height: 500px;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px -7px;
     margin-right: 60px;
     margin-bottom: 30px;
 }
 
-.ComicDetail__body__image button {
+.NewComicDetail__body__image button {
     transition: all .4s ease;
     color: #e7e7e7;
     border: 1px solid #333333;
@@ -26,34 +26,34 @@
     width: fit-content;
 }
 
-.ComicDetail__body__image button:hover {
+.NewComicDetail__body__image button:hover {
     color: #333333;
     background-color: transparent;
 }
 
-.ComicDetail__body__image {
+.NewComicDetail__body__image {
     display:flex;
     flex-direction: column;
 }
 
-.ComicDetail__body__info h2 {
+.NewComicDetail__body__info h2 {
     margin-top: 0;
     margin-bottom: 30px;
 }
 
-.ComicDetail__body__info__description p {
+.NewComicDetail__body__info__description p {
     margin-bottom: 50px;
 }
 
-.ComicDetail__body__info__description em {
+.NewComicDetail__body__info__description em {
     font-style: normal;
 }
 
-.ComicDetail__body__info__description h4 {
+.NewComicDetail__body__info__description h4 {
     margin-bottom: 20px;
 }
 
-.ComicDetail__body__info__description table {
+.NewComicDetail__body__info__description table {
     flex-direction: column;
     border: 1px rgb(187, 187, 187) solid;
     border-radius: 5px;
@@ -61,46 +61,46 @@
     border-collapse: collapse;
 }
 
-.ComicDetail__body__info__description thead {
+.NewComicDetail__body__info__description thead {
     background-color: rgb(221, 221, 221);
     text-align: left;
     vertical-align: middle;
     justify-content: space-between;
 }
 
-.ComicDetail__body__info__description th:last-child {
+.NewComicDetail__body__info__description th:last-child {
     text-align: center;
 }
 
-.ComicDetail__body__info__description th {
+.NewComicDetail__body__info__description th {
     padding: 5px 10px;
 }
 
-.ComicDetail__body__info__description tbody {
+.NewComicDetail__body__info__description tbody {
     text-align: left;
     vertical-align: middle;
 }
 
-.ComicDetail__body__info__description td:last-child {
+.NewComicDetail__body__info__description td:last-child {
     text-align: center;
 }
 
-.ComicDetail__body__info__description td {
+.NewComicDetail__body__info__description td {
     padding: 5px 10px;
 }
 
-.ComicDetail__body__info__description a {
+.NewComicDetail__body__info__description a {
     color: black;
 }
 
-.ComicDetail__comment {
+.NewComicDetail__comment {
     display: flex;
     flex-direction: column;
     align-items: left;
     margin-left: 400px;
 }
 
-.ComicDetail__Link {
+.NewComicDetail__Link {
     transition: all .4s ease;
     color: #e7e7e7;
     border: 1px solid #333333;
@@ -115,7 +115,7 @@
     cursor: pointer;
 }
 
-.ComicDetail__Link a:hover {
+.NewComicDetail__Link a:hover {
     color: #333333;
     background-color: transparent;
 }

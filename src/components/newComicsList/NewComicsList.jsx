@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ComicCard from "../comicCard/ComicCard";
+import NewComicCard from "../newComicCard/NewComicCard";
 import { getNewComics, searchNewComics } from "../../services/ComicService";
 import "./NewComicsList.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -53,7 +53,7 @@ export default function NewComicsList() {
             <SearchBar onSubmit={onSearch} />
             <div className="newComicsList__container">
                 {comics.map((comic) => (
-                <ComicCard key={comic.id} {...comic} />
+                <NewComicCard key={comic.id} {...comic} />
                 ))}
             </div>
         </>

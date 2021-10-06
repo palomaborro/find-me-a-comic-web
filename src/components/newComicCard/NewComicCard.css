@@ -1,0 +1,33 @@
+.NewComicCard {
+    display: flex;
+    padding: 2%;
+    flex-basis: 1%;
+    justify-content: left;
+}
+
+.NewComicCard__image {
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px -7px;
+    margin-bottom: 15px;
+    
+}
+
+.NewComicCard__info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: black;
+    margin-top: auto;
+}
+
+.NewComicCard__info__name {
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.NewComicCard__info__issue {
+    font-weight: 200;
+    font-size: 15px;
+    margin: 0;
+}

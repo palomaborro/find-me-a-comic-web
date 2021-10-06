@@ -1,0 +1,14 @@
+/* .MyCollection {
+    display: flex;
+    flex-direction: column;
+}
+
+.MyCollection img {
+    border-radius: 50%;
+    height: 80px;
+    size: cove;
+} */
+
+.MyCollection h2 {
+    font-weight: 100;
+}
