@@ -6,7 +6,7 @@
     margin: 0;
     background-color: rgba(88, 88, 88, 0.589);
     background-blend-mode: multiply;
-    padding: 140px 0;
+    padding: 180px 0;
 }
 
 .Home__container__header h1 {
@@ -32,19 +32,20 @@
 }
   
   .Home__container__header a:hover{
-    color: rgb(138, 138, 138);
+    color: #d23f6c;
   }
 
 .Home ul {
-    margin-top: 50px;
+    margin-top: 80px;
     list-style-type: none;
     display: flex;
-    text-align: left;
+    text-align: center;
     padding-left: 250px;
     padding-right: 250px;
     font-size: 25px;
+    font-weight: 300;
     justify-content: space-between;
-    font-weight: 400;
+    margin-bottom: 100px;
 }
 
 .Home ul p {
@@ -54,4 +55,18 @@
 
 .Home__container__header__button {
     font-weight: 500;
+}
+
+.Home li img {
+    width: 7vw;
+}
+
+.Home__container__info {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.Home__container__info span {
+    color: #d23f6c;
+
 }

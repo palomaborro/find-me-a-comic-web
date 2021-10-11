@@ -7,74 +7,60 @@ export default function Navbar() {
   const { user, logoutFunction } = useAuth();
 
   return (
-    <nav className="Navbar">
-      <Link
-              to="/"
-              className="Navbar__logo"
-              >
-              <Logo />
+    <div>
+      <Link to="/" className="Navbar__logo">
+        <Logo />
       </Link>
-      <ul className='Navbar__links'>
-        {
-          user ? (
+      <nav className="Navbar">
+        <ul className="Navbar__links">
+          {user ? (
             <>
-            <li>
-            <Link
-              to="/comics"
-              className="Navbar__content__link"
-              >Comics
-            </Link>
-        </li>
-            <li>
-            <Link
-              to="/new"
-              className="Navbar__content__link"
-              >New
-            </Link>
-        </li>
-            <li>
-            <Link
-              to="/lists"
-              className="Navbar__content__link"
-            >Lists
-            </Link>
-        </li>
-        <li>
-            <Link
-              to="/mycollection"
-              className="Navbar__content__link"
-              >My Collection
-            </Link>
-        </li>
-        <li>
-          <button
-          className='Navbar__content__button'
-          onClick={logoutFunction}
-          title='Logout'
-          >Logout
-          </button>
-        </li>
-        </>
+              <li>
+                <Link to="/comics" className="Navbar__content__link">
+                  Comics
+                </Link>
+              </li>
+              <li>
+                <Link to="/new" className="Navbar__content__link">
+                  New
+                </Link>
+              </li>
+              <li>
+                <Link to="/lists" className="Navbar__content__link">
+                  Lists
+                </Link>
+              </li>
+              <li>
+                <Link to="/mycollection" className="Navbar__content__link">
+                  My Collection
+                </Link>
+              </li>
+              <li>
+                <button
+                  className="Navbar__content__button"
+                  onClick={logoutFunction}
+                  title="Logout"
+                >
+                  Logout
+                </button>
+              </li>
+            </>
           ) : (
             <>
-            <li>
-            <Link
-              to="/comics"
-              className="Navbar__content__link"
-              >Comics
-            </Link>
-        </li>
-        <li>
-            <Link
-              to="/login"
-              className="Navbar__content__link"
-              >Login
-            </Link>
-        </li>
-        </>
-          )
-        }
-      </ul>
-    </nav>
+              <li>
+                <Link to="/comics" className="Navbar__content__link">
+                  Comics
+                </Link>
+              </li>
+              <li>
+                <Link to="/login" className="Navbar__content__link">
+                  Login
+                </Link>
+              </li>
+            </>
+          )}
+        </ul>
+      </nav>
+    </div>
   );
 }

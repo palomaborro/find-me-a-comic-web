@@ -1,17 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getComic } from "../../services/ComicService";
+import { addComicToList, getComic } from "../../services/ComicService";
 import Loader from "react-loader-spinner";
 import "./ComicDetail.css";
 import Comment from "../comment/Comment";
 import CommentForm from "../commentForm/CommentForm";
+import { getLists } from "../../services/ComicService";
 
 export default function ComicDetail() {
   const { id } = useParams();
   const [comic, setComic] = useState();
   const [comments, setComments] = useState([]);
+  const [fav, setFav] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [lists, setLists] = useState();
+  const [select, setSelect] = useState("Select a list");
   const [error, setError] = useState(false);
+
+  useEffect(() => {
+    getLists()
+      .then((res) => {
+        setLists(res);
+      })
+      .catch(() => {
+        setError(true);
+      });
+  }, []);
 
   useEffect(() => {
     getComic(id)
@@ -24,6 +38,25 @@ export default function ComicDetail() {
         setError(true);
       });
   }, [id]);
+
+  const addToFav = (comic) => {
+    const newAddToFav = [...fav, comic];
+    setFav(newAddToFav);
+  };
+
+  const onCommentCreate = (comment) => {
+    setComments((old) => [...old, comment]);
+  };
+
+  const handleListChange = (event) => {
+    setSelect(event.target.value);
+  };
+
+  const saveComic = () => {
+    addComicToList(select, id)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
 
   const style = {
     position: "fixed",
@@ -44,10 +77,6 @@ export default function ComicDetail() {
     );
   }
 
-  const onCommentCreate = (comment) => {
-    setComments((old) => ([...old, comment]));
-  };
-
   return (
     <div className="ComicDetail">
       {loading ? (
@@ -63,11 +92,31 @@ export default function ComicDetail() {
         <div className="ComicDetail__body">
           <div className="ComicDetail__body__image">
             <img src={comic.image.original_url} alt="" />
-            <form>
-              <label>Add to list</label>
-              <select></select>
-            </form>
-            <Link className='ComicDetail__Link' to='/mycollection'>Create a list</Link>
+            <div className="ComicDetail__body__form">
+              <label>Add to list:</label>
+              {lists && lists.length > 0 && (
+                <>
+                  <select onChange={handleListChange}>
+                    <option value="Select a list">Select a list</option>
+                    {lists.map((list) => (
+                      <option key={list.id} value={list.id}>
+                        {list.title}
+                      </option>
+                    ))}
+                  </select>
+                  <button onClick={saveComic}>Add</button>
+                </>
+              )}
+            </div>
+            <Link className="ComicDetail__Link" to="/mycollection">
+              Create a list
+            </Link>
+            <button
+              onClick={() => addToFav(comic)}
+              className="ComicDetail__Link"
+            >
+              Add to favorites
+            </button>
           </div>
           <div className="ComicDetail__body__info">
             {comic.name && comic.issue_number ? (
@@ -104,13 +153,15 @@ export default function ComicDetail() {
           </div>
         </div>
       )}
-      <div className="ComicDetail__comment">
-        <h2>Comments:</h2>
-        {comments.map((comment) => (
-          <Comment key={comment.id} {...comment} />
-        ))}
-        <CommentForm comicId={id} onCreate={onCommentCreate} />
-      </div>
+      {!loading && (
+        <div className="ComicDetail__comment">
+          <h2>Comments</h2>
+          {comments.map((comment) => (
+            <Comment key={comment.id} {...comment} />
+          ))}
+          <CommentForm comicId={id} onCreate={onCommentCreate} />
+        </div>
+      )}
     </div>
   );
 }

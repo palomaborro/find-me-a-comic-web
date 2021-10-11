@@ -5,13 +5,25 @@ import Loader from "react-loader-spinner";
 import "./NewComicDetail.css";
 import Comment from "../comment/Comment";
 import CommentForm from "../commentForm/CommentForm";
+import { getLists } from "../../services/ComicService";
 
 export default function ComicDetail() {
   const { id } = useParams();
   const [comic, setComic] = useState();
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [lists, setLists] = useState();
   const [error, setError] = useState(false);
+
+  useEffect(() => {
+    getLists()
+      .then((res) => {
+        setLists(res);
+      })
+      .catch(() => {
+        setError(true);
+      });
+  }, []);
 
   useEffect(() => {
     getNewComic(id)
@@ -45,11 +57,11 @@ export default function ComicDetail() {
   }
 
   const onCommentCreate = (comment) => {
-    setComments((old) => ([...old, comment]));
+    setComments((old) => [...old, comment]);
   };
 
   return (
-      <div className="NewComicDetail">
+    <div className="NewComicDetail">
       {loading ? (
         <Loader
           style={style}
@@ -63,11 +75,21 @@ export default function ComicDetail() {
         <div className="NewComicDetail__body">
           <div className="NewComicDetail__body__image">
             <img src={comic.image.original_url} alt="" />
-            <form>
+            <form className='NewComicDetail__body__form'>
               <label>Add to list</label>
-              <select></select>
+              {lists && lists.length > 0 && (
+                <select>
+                  {lists.map((list) => (
+                    <option key={list.id} value={list.id}>
+                      {list.title}
+                    </option>
+                  ))}
+                </select>
+              )}
             </form>
-            <Link className='NewComicDetail__Link' to='/mycollection'>Create a list</Link>
+            <Link className="NewComicDetail__Link" to="/mycollection">
+              Create a list
+            </Link>
           </div>
           <div className="NewComicDetail__body__info">
             {comic.name && comic.issue_number ? (
@@ -105,7 +127,7 @@ export default function ComicDetail() {
         </div>
       )}
       <div className="NewComicDetail__comment">
-        <h2>Comments:</h2>
+        <h2>Comments</h2>
         {comments.map((comment) => (
           <Comment key={comment.id} {...comment} />
         ))}

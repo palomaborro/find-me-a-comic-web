@@ -1,0 +1,3 @@
+.App > div:nth-child(2){
+    min-height: calc(100vh - 178px - 65px - 80px);
+}

@@ -10,6 +10,8 @@ import Navbar from './components/navbar/Navbar';
 import SignUp from './components/signUp/SignUp';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
 import MyCollection from './components/myCollection/MyCollection';
+import Lists from './components/lists/Lists';
+import Footer from './components/footer/Footer';
 
 
 export default function App() {
@@ -38,10 +40,14 @@ export default function App() {
         <PrivateRoute exact path='/new/:id'>
           <NewComicDetail />
         </PrivateRoute>
+        <PrivateRoute path='/lists'>
+          <Lists />
+        </PrivateRoute>
         <PrivateRoute path='/mycollection'>
           <MyCollection />
         </PrivateRoute>
       </Switch>
+      <Footer />
     </div>
   );
 }

@@ -1,38 +1,43 @@
-.Login {
+.ListForm {
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    margin-bottom: 30vh;
 }
 
-.Login form {
+.ListForm form {
     display: flex;
     flex-direction: column;
-    width: 15vw;
+    width: 20vw;
 }
 
-.Login form label {
+.ListForm form label {
     margin-bottom: 10px;
     font-weight: 400;
 }
 
-.Login__email {
+.ListForm__title {
     margin-bottom: 30px;
     border: 1px rgb(187, 187, 187) solid;
     border-radius: 5px;
     padding: 10px 5px;
 }
 
-.Login__password {
+.ListForm__description {
     margin-bottom: 10px;
     border: 1px rgb(187, 187, 187) solid;
     border-radius: 5px;
     padding: 10px 5px;
 }
 
-.Login form button {
+.ListForm textarea {
+    height: 10vh;
+    width: 48vh;
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.ListForm form button {
     transition: all .4s ease;
     color: #e7e7e7;
     border: 1px solid #333333;
@@ -47,27 +52,7 @@
     cursor: pointer;
 }
 
-.Login form button:hover{
-    color: #333333;
-    background-color: transparent;
-}
-
-.Login__signup {
-    transition: all .4s ease;
-    color: #e7e7e7;
-    border: 1px solid #333333;
-    text-align: center;
-    line-height: 1;
-    font-size: 15px;
-    font-weight: 600;
-    background-color : #333333;
-    padding: 10px 5px;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-a:hover {
+.ListForm form button:hover{
     color: #333333;
     background-color: transparent;
 }

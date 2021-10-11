@@ -12,7 +12,7 @@
 
 .ComicDetail__body__image button {
     transition: all .4s ease;
-    color: #e7e7e7;
+    color: #d23f6c;
     border: 1px solid #333333;
     text-align: center;
     line-height: 1;
@@ -24,6 +24,25 @@
     border-radius: 5px;
     cursor: pointer;
     width: fit-content;
+}
+
+.ComicDetail__body__form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.ComicDetail__body__form select {
+    border: 1px rgb(187, 187, 187) solid;
+    border-radius: 5px;
+    padding: 10px 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.ComicDetail__body__form label {
+    margin-bottom: 10px;
 }
 
 .ComicDetail__body__image button:hover {
@@ -100,6 +119,11 @@
     margin-left: 400px;
 }
 
+.ComicDetail__comment h2 {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
 .ComicDetail__Link {
     transition: all .4s ease;
     color: #e7e7e7;
@@ -113,6 +137,8 @@
     outline: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 250px;
+    margin-top: 10px;
 }
 
 .ComicDetail__Link a:hover {

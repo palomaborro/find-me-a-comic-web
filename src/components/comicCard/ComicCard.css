@@ -31,3 +31,7 @@
     font-size: 15px;
     margin: 0;
 }
+
+.ComicCard p:hover {
+    color: #d23f6c;
+}

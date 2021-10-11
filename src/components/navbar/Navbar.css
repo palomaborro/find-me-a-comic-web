@@ -1,10 +1,11 @@
 .Navbar {
   background-color: #333333;
   display: flex;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 18px;
   padding-left: 400px;
   padding-right: 400px;
+  height: 65px;
 }
 
 .Navbar__links{
@@ -16,13 +17,13 @@
   }
 
  .Navbar ul a:hover {
-  background-color: #272727;
-  color: #e7e7e7;
+  color: #d23f6c;
  }
 
  .Navbar__logo {
-  display: block;
-  padding: 15px;
+  position: absolute;
+  padding-left: 250px;
+  padding-top: 2px;
 }
 
 .Navbar__content__link {
@@ -41,12 +42,12 @@ a {
   color: #e7e7e7;
   padding: 24px;
   display: block;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
   cursor: pointer;
 }
 
 .Navbar__content__button:hover {
-  background-color: #272727;
+  color: #d23f6c;
 }

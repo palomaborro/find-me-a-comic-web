@@ -1,14 +1,34 @@
-/* .MyCollection {
+.MyCollection {
     display: flex;
     flex-direction: column;
+    margin: 30px 400px 50px 400px;
 }
 
 .MyCollection img {
     border-radius: 50%;
-    height: 80px;
-    size: cove;
-} */
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px -7px;
+    margin-bottom: 15px;
+}
+
+.MyCollection p {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 50px;
+}
+
+.MyCollection span {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 
 .MyCollection h2 {
     font-weight: 100;
+    text-align: left;
 }

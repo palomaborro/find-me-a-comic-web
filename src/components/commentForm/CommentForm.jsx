@@ -21,9 +21,13 @@ export default function CommentForm({ comicId, onCreate }) {
 
     createComment(comment, comicId)
       .then((comment) => {
+        console.log('comment: ', comment)
         onCreate(comment);
       })
-      .catch((event) => setError(event.response.data.message));
+      .catch((event) => {
+        console.log('event: ', event)
+        setError(event?.response?.data?.message)
+      });
   };
 
   if (!user) {
