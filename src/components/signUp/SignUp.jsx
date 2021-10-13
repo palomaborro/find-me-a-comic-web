@@ -38,6 +38,7 @@ export default function SignUp() {
   }
 
   return (
+    // <div className='Signup__Background'>
     <div className="SignUp">
       <form onSubmit={doRegister}>
       {error && 
@@ -87,5 +88,6 @@ export default function SignUp() {
         <button type="submit">Sign Up</button>
       </form>
     </div>
+    // </div>
   );
 }

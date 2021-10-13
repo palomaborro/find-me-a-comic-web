@@ -1,0 +1,9 @@
+.Lists {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 415px 50px 415px;
+}
+
+.Lists h1 {
+    font-weight: 400;
+}

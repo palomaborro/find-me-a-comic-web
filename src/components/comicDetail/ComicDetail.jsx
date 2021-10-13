@@ -11,7 +11,6 @@ export default function ComicDetail() {
   const { id } = useParams();
   const [comic, setComic] = useState();
   const [comments, setComments] = useState([]);
-  const [fav, setFav] = useState([]);
   const [loading, setLoading] = useState(true);
   const [lists, setLists] = useState();
   const [select, setSelect] = useState("Select a list");
@@ -39,11 +38,6 @@ export default function ComicDetail() {
       });
   }, [id]);
 
-  const addToFav = (comic) => {
-    const newAddToFav = [...fav, comic];
-    setFav(newAddToFav);
-  };
-
   const onCommentCreate = (comment) => {
     setComments((old) => [...old, comment]);
   };
@@ -60,7 +54,7 @@ export default function ComicDetail() {
 
   const style = {
     position: "fixed",
-    top: "50%",
+    top: "40%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
@@ -111,12 +105,6 @@ export default function ComicDetail() {
             <Link className="ComicDetail__Link" to="/mycollection">
               Create a list
             </Link>
-            <button
-              onClick={() => addToFav(comic)}
-              className="ComicDetail__Link"
-            >
-              Add to favorites
-            </button>
           </div>
           <div className="ComicDetail__body__info">
             {comic.name && comic.issue_number ? (

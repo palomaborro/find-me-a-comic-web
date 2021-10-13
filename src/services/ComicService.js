@@ -30,22 +30,22 @@ export const createComment = (comment, comicId) => {
     return http.post(`/comics/${comicId}/comments`, comment);
 }
 
-// export const deleteComment = (comment, comicId) => {
-//     return http.post(`/comics/${comicId}/comments`, comment);
-// }
-
 export const createList = (list) => {
     return http.post('/mycollection/lists', list);
+}
+
+export const deleteList = (list) => {
+    return http.delete(`/mycollection/lists/${list}`)
 }
 
 export const getLists = () => {
     return http.get('/lists');
 }
 
-export const addComicToList = (listId, comicId) => {
-    return http.put(`/lists/${comicId}`, {listId});
+export const getComicList = (list) => {
+    return http.get(`/mycollection/${list}`)
 }
 
-export const createFav = (fav, comicId) => {
-    return http.post(`/comics/${comicId}/fav`, fav);
+export const addComicToList = (listId, comicId) => {
+    return http.put(`/lists/${comicId}`, {listId});
 }

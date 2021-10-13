@@ -1,6 +1,6 @@
 .NewComicDetail__body {
     display: flex;
-    margin: 70px 400px;
+    margin: 70px 376px;
 }
 
 .NewComicDetail__body__image img {
@@ -116,7 +116,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-left: 400px;
+    margin-left: 376px;
 }
 
 .NewComicDetail__comment h2 {

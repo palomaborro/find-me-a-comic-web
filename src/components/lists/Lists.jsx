@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getLists } from "../../services/ComicService";
 import List from "../list/List";
-
+import './Lists.css'
 
 export default function Lists() {
     const [lists, setLists] = useState([]);

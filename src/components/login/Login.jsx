@@ -31,6 +31,7 @@ export default function Login() {
   }
 
   return (
+    // <div className='Background'>
     <div className="Login">
       <form onSubmit={doLogin}>
       {error && 
@@ -61,5 +62,6 @@ export default function Login() {
       <Link className='Login__signup' to='/signup'>Or sign up here</Link>
       </form>
     </div>
+    // </div>
   );
 }
