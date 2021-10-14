@@ -6,15 +6,19 @@ import "./ComicDetail.css";
 import Comment from "../comment/Comment";
 import CommentForm from "../commentForm/CommentForm";
 import { getLists } from "../../services/ComicService";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function ComicDetail() {
-  const { id } = useParams();
   const [comic, setComic] = useState();
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [lists, setLists] = useState();
   const [select, setSelect] = useState("Select a list");
   const [error, setError] = useState(false);
+  
+  const { id } = useParams();
+  const { user } = useAuth();
+
 
   useEffect(() => {
     getLists()
@@ -47,7 +51,7 @@ export default function ComicDetail() {
   };
 
   const saveComic = () => {
-    addComicToList(select, id)
+    addComicToList(select, id, user)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
@@ -90,7 +94,7 @@ export default function ComicDetail() {
               <label>Add to list:</label>
               {lists && lists.length > 0 && (
                 <>
-                  <select onChange={handleListChange}>
+                  <select className='ComicDetail__body__form__select' onChange={handleListChange}>
                     <option value="Select a list">Select a list</option>
                     {lists.map((list) => (
                       <option key={list.id} value={list.id}>

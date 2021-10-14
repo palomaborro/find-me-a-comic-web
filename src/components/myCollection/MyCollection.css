@@ -1,34 +1,46 @@
 .MyCollection {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 410px 50px 410px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 420px 50px 420px;
 }
 
-.MyCollection img {
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    object-fit: cover;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px -7px;
-    margin-bottom: 15px;
+.MyCollection__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.MyCollection__avatar {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px -7px;
+  margin-bottom: 15px;
 }
 
 .MyCollection p {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
 }
 
 .MyCollection span {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 .MyCollection h2 {
-    font-weight: 100;
-    text-align: left;
+  font-weight: 100;
+  text-align: center;
+}
+
+.MyCollection h1 {
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
 }

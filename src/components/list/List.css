@@ -1,7 +1,40 @@
+.List {
+
+}
+
 .List h3 {
     font-weight: 400;
+    margin: 0;
 }
 
 .List p {
     font-weight: 300;
+    margin: 0;
+}
+
+.List h5 {
+    font-weight: 400
+}
+
+.List__Comics {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.List button {
+    transition: all .4s ease;
+    color: #e7e7e7;
+    border: 1px solid #333333;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    background-color : #333333;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 20px;
 }

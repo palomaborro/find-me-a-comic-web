@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { getLists } from "../../services/ComicService";
 import { getComics } from "../../services/ComicService";
 
-export default function MyCollection() {
+export default function MyCollection({id}) {
   const [lists, setLists] = useState([]);
   const [comics, setComics] = useState([]);
   const [error, setError] = useState(false);
@@ -42,21 +42,31 @@ export default function MyCollection() {
   };
 
   const updateList = (listId) => {
-    setLists((old) => [...old.filter(list => list.id !== listId)]);
+    setLists((old) => [...old.filter((list) => list.id !== listId)]);
   };
+  
 
   return (
     <div className="MyCollection">
       {user && (
         <>
-          <img src={user.image} alt="" />
+          <img className="MyCollection__avatar" src={user.image} alt="" />
           <span>{user.name}</span>
-          <h2>Your lists</h2>
+          {lists.length > 0 && <h1>Your lists</h1>}
+          <div className="MyCollection__list">
           {lists.map((list) => (
-            <List key={list.id} {...list} id={list.id} updateList={updateList}/>
+            <List
+              key={list.id}
+              {...list}
+              id={list.id}
+              updateList={updateList}
+            />
           ))}
-          <h2>Create a list</h2>
-          <ListForm onCreate={onListCreate} />
+          </div>
+          <div className="MyCollection__form">
+            <h2>Create a list</h2>
+            <ListForm onCreate={onListCreate} />
+          </div>
         </>
       )}
     </div>

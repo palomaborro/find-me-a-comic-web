@@ -1,9 +1,15 @@
 .Lists {
     display: flex;
     flex-direction: column;
-    margin: 30px 415px 50px 415px;
+    margin: 30px 420px 50px 420px;
 }
 
 .Lists h1 {
     font-weight: 400;
+}
+
+.Lists__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -12,7 +12,7 @@
 
 .ComicDetail__body__image button {
     transition: all .4s ease;
-    color: #d23f6c;
+    color: #e7e7e7;
     border: 1px solid #333333;
     text-align: center;
     line-height: 1;
@@ -144,4 +144,8 @@
 .ComicDetail__Link a:hover {
     color: #333333;
     background-color: transparent;
+}
+
+.ComicDetail__body__form__select  {
+    margin-bottom: 10px;
 }

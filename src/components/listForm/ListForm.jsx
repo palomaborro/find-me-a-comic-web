@@ -40,7 +40,6 @@ export default function ListForm({ onCreate }) {
         <label>Title:</label>
         <input
           className="ListForm__title"
-          placeholder="Best of..."
           name="title"
           id="title"
           value={list.title}

@@ -1,0 +1,37 @@
+.ComicCardCollection {
+    display: flex;
+    flex-basis: 1%;
+    justify-content: left;
+    padding: 10px 10px 0 0;
+}
+
+.ComicCardCollection__image {
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px -7px;
+    margin-bottom: 15px;
+    
+}
+
+.ComicCardCollection__info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: black;
+    margin-top: auto;
+}
+
+.ComicCardCollection__info__name {
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.ComicCardCollection__info__issue {
+    font-weight: 200;
+    font-size: 15px;
+    margin: 0;
+}
+
+.ComicCardCollection p:hover {
+    color: #d23f6c;
+}

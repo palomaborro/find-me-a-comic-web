@@ -27,7 +27,7 @@ export default function Login() {
     .then(() => {
         replace('/new')
     })
-    .catch((event) => setError(event.response.data.message))
+    .catch((event) => setError(event?.response?.data?.message))
   }
 
   return (
@@ -39,7 +39,6 @@ export default function Login() {
         <label htmlFor="email">Email:</label>
         <input
           className='Login__email'
-          placeholder='friendlyspidey@gmail.com'
           name="email"
           id="email"
           value={credentials.email}
@@ -49,7 +48,6 @@ export default function Login() {
         <label htmlFor="password">Password:</label>
         <input
           className='Login__password'
-          placeholder='peterparker123'
           name="password"
           id="password"
           type='password'

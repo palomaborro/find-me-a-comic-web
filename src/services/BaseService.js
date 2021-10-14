@@ -4,7 +4,7 @@ import { getAccessToken } from "../store/AccessTokenStore";
 
 export const create = (useAccessToken = true) => {
     const http = axios.create({
-        baseURL: `${process.env.REACT_APP_API_HOST}`
+        baseURL: "http://localhost:3001"
     })
   
     http.interceptors.request.use((request) => {

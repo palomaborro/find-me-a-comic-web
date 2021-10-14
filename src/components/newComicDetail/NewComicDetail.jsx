@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getNewComic } from "../../services/ComicService";
+import { addComicToList, getNewComic } from "../../services/ComicService";
 import Loader from "react-loader-spinner";
 import "./NewComicDetail.css";
 import Comment from "../comment/Comment";
 import CommentForm from "../commentForm/CommentForm";
 import { getLists } from "../../services/ComicService";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function ComicDetail() {
-  const { id } = useParams();
   const [comic, setComic] = useState();
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [lists, setLists] = useState();
+  const [select, setSelect] = useState("Select a list");
   const [error, setError] = useState(false);
+
+  const { id } = useParams();
+  const { user } = useAuth();
 
   useEffect(() => {
     getLists()
@@ -37,9 +41,23 @@ export default function ComicDetail() {
       });
   }, [id]);
 
+  const onCommentCreate = (comment) => {
+    setComments((old) => [...old, comment]);
+  };
+
+  const handleListChange = (event) => {
+    setSelect(event.target.value);
+  };
+
+  const saveComic = () => {
+    addComicToList(select, id, user)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   const style = {
     position: "fixed",
-    top: "50%",
+    top: "40%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
@@ -56,10 +74,6 @@ export default function ComicDetail() {
     );
   }
 
-  const onCommentCreate = (comment) => {
-    setComments((old) => [...old, comment]);
-  };
-
   return (
     <div className="NewComicDetail">
       {loading ? (
@@ -75,18 +89,22 @@ export default function ComicDetail() {
         <div className="NewComicDetail__body">
           <div className="NewComicDetail__body__image">
             <img src={comic.image.original_url} alt="" />
-            <form className='NewComicDetail__body__form'>
-              <label>Add to list</label>
+            <div className="NewComicDetail__body__form">
+              <label>Add to list:</label>
               {lists && lists.length > 0 && (
-                <select>
-                  {lists.map((list) => (
-                    <option key={list.id} value={list.id}>
-                      {list.title}
-                    </option>
-                  ))}
-                </select>
+                <>
+                  <select className="NewComicDetail__body__form__select" onChange={handleListChange}>
+                    <option value="Select a list">Select a list</option>
+                    {lists.map((list) => (
+                      <option key={list.id} value={list.id}>
+                        {list.title}
+                      </option>
+                    ))}
+                  </select>
+                  <button onClick={saveComic}>Add</button>
+                </>
               )}
-            </form>
+            </div>
             <Link className="NewComicDetail__Link" to="/mycollection">
               Create a list
             </Link>
@@ -126,13 +144,15 @@ export default function ComicDetail() {
           </div>
         </div>
       )}
-      <div className="NewComicDetail__comment">
-        <h2>Comments</h2>
-        {comments.map((comment) => (
-          <Comment key={comment.id} {...comment} />
-        ))}
-        <CommentForm comicId={id} onCreate={onCommentCreate} />
-      </div>
+      {!loading && (
+        <div className="NewComicDetail__comment">
+          <h2>Comments</h2>
+          {comments.map((comment) => (
+            <Comment key={comment.id} {...comment} />
+          ))}
+          <CommentForm comicId={id} onCreate={onCommentCreate} />
+        </div>
+      )}
     </div>
   );
 }

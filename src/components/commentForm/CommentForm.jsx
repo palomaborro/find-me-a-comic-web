@@ -46,7 +46,6 @@ export default function CommentForm({ comicId, onCreate }) {
             id="description"
             value={comment.description}
             onChange={onChange}
-            placeholder="Join the discussion"
           />
 
           <button type="submit">Comment</button>

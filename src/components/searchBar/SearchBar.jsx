@@ -9,7 +9,6 @@ export default function SearchBar({onSubmit}) {
       <input
         value={search}
         type="text"
-        placeholder="Find me"
         onChange={(event) => setSearch(event.target.value)}
       />
       <button onClick={() => onSubmit(search)} type="submit">Search</button>

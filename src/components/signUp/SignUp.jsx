@@ -46,7 +46,6 @@ export default function SignUp() {
         <label htmlFor="email">Email:</label>
         <input
           className='SignUp__email'
-          placeholder='freelancehunter@gmail.com'
           name="email"
           id="email"
           value={user.email}
@@ -56,7 +55,6 @@ export default function SignUp() {
         <label htmlFor="password">Password:</label>
         <input
           className='SignUp__password'
-          placeholder='lyingcat39'
           name="password"
           id="password"
           type='password'
@@ -67,7 +65,6 @@ export default function SignUp() {
         <label htmlFor="Name">Name:</label>
         <input
           className='SignUp__name'
-          placeholder='Billy'
           name="name"
           id="name"
           type='name'

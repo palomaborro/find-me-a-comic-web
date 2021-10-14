@@ -6,7 +6,7 @@
 .ListForm form {
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 350px;
 }
 
 .ListForm form label {
@@ -29,8 +29,8 @@
 }
 
 .ListForm textarea {
-    height: 10vh;
-    width: 48vh;
+    height: 90px;
+    width: 350px;
     border: 1px rgb(187, 187, 187) solid;
     border-radius: 5px;
     padding-top: 10px;
