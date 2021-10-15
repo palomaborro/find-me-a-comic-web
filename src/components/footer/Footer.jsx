@@ -4,7 +4,7 @@ import Logo from "../../assets/logo/logo.png";
 export default function Footer() {
     return (
         <div className='Footer'>
-            <img src={Logo} />
+            <img src={Logo} alt='' />
             <div className='Footer__info'>
                 <a>About Find Me A Comic</a>
                 <a>Help/FAQS</a>

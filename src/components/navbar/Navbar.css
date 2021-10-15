@@ -3,28 +3,31 @@
   display: flex;
   font-weight: 300;
   font-size: 18px;
-  padding-left: 400px;
-  padding-right: 400px;
-  height: 65px;
+  height: 70px;
+  width: 100%;
 }
 
 .Navbar__links{
+  padding-left: 300px !important;
+  padding-right: 100px !important;
+  width: 100%;
    margin: 0;
    padding: 0;
    list-style-type: none;
    display: flex;
    align-items:center;
+   justify-content: space-between !important;
   }
 
  .Navbar ul a:hover {
   color: #d23f6c;
  }
 
- .Navbar__logo {
-  position: absolute;
-  padding-left: 250px;
-  padding-top: 2px;
-}
+ .Navbar__container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
 
 .Navbar__content__link {
   color: #e7e7e7;

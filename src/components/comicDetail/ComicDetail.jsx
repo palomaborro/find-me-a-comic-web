@@ -56,9 +56,10 @@ export default function ComicDetail() {
       .catch((err) => console.log(err));
   };
 
+
   const style = {
     position: "fixed",
-    top: "40%",
+    top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
@@ -66,11 +67,7 @@ export default function ComicDetail() {
   if (error) {
     return (
       <div className="ComicList__error">
-        <h1>Sorry, there was an error</h1>
-        <img
-          src="https://c.tenor.com/-Qs0HrNLF0AAAAAC/wait-what-spider-man.gif"
-          alt=""
-        />
+        <h1>Sorry, you must register</h1>
       </div>
     );
   }

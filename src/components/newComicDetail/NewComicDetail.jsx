@@ -50,14 +50,17 @@ export default function ComicDetail() {
   };
 
   const saveComic = () => {
+    console.log('select', select)
+    console.log('id', id)
+    console.log('user', user)
     addComicToList(select, id, user)
-      .then((res) => console.log(res))
+    .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
 
   const style = {
     position: "fixed",
-    top: "40%",
+    top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
@@ -65,11 +68,7 @@ export default function ComicDetail() {
   if (error) {
     return (
       <div className="newComicsList__error">
-        <h1>Sorry, there was an error</h1>
-        <img
-          src="https://c.tenor.com/-Qs0HrNLF0AAAAAC/wait-what-spider-man.gif"
-          alt=""
-        />
+        <h1>Sorry, you must register</h1>
       </div>
     );
   }

@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../hooks/useAuth";
 import { getComic } from "../../services/ComicService";
+import Loader from "react-loader-spinner";
 import ComicCardCollection from "../comicCardCollection/ComicCardCollection";
 import "./ListCollection.css";
 
-export default function ListCollection({ title, description, author, comics, lists }) {
+export default function ListCollection({ title, description, author, comics }) {
 
   const { user } = useAuth();
   const [comicsResult, setComicsResult] = useState([]);
 
   useEffect(() => {
-    if (user && comics) {
+    if (user) {
     const comicPromises = comics.map((comic) => getComic(comic));
       Promise.all(comicPromises)
       .then(data => {
@@ -24,7 +25,7 @@ export default function ListCollection({ title, description, author, comics, lis
     {user && (
       <>
       <h3>{title}</h3>
-      <h5>{author.name}</h5>
+      <h5>{user.name}</h5>
       <p>{description}</p>
       <div className='ListCollection__Comics'>
       {comicsResult.map((comic) => (

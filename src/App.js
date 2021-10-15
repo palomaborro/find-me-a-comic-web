@@ -34,12 +34,12 @@ export default function App() {
         <Route exact path='/comics/:id'>
           <ComicDetail />
         </Route>
-        <PrivateRoute exact path='/new'>
+        <Route exact path='/new'>
           <NewComicsList />
-        </PrivateRoute>
-        <PrivateRoute exact path='/new/:id'>
+        </Route>
+        <Route exact path='/new/:id'>
           <NewComicDetail />
-        </PrivateRoute>
+        </Route>
         <PrivateRoute path='/lists'>
           <Lists />
         </PrivateRoute>

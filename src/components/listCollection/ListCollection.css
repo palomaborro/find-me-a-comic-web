@@ -1,5 +1,5 @@
 .ListCollection {
-
+margin-right: 60px;
 }
 
 .ListCollection h3 {
@@ -13,7 +13,9 @@
 }
 
 .ListCollection h5 {
-    font-weight: 400
+    font-weight: 400;
+    color: #d23f6c;
+    margin-top: 0;
 }
 
 .ListCollection__Comics {

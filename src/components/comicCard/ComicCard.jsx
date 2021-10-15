@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./ComicCard.css";
 
 export default function ComicCard({ volume, image, issue_number, id }) {
+
   return (
     <div className="ComicCard">
       <Link to={`/comics/${id}`}>

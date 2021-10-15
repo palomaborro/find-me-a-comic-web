@@ -17,15 +17,15 @@ export default function Home() {
                 <div className='Home__container__info'>
                     <ul>
                         <li>
-                        <img src={findIcon}/>
+                        <img src={findIcon} alt='' />
                             <p>Find all the new <span>releases</span></p>
                         </li>
                         <li>
-                        <img src={shareIcon}/>
+                        <img src={shareIcon} alt='' />
                             <p>Share and rate your <span>favorite</span> comics</p>
                         </li>
                         <li>
-                        <img src={organizeIcon}/>
+                        <img src={organizeIcon} alt='' />
                             <p>We organize your <span>collection</span> for you</p>
                         </li>
                     </ul>

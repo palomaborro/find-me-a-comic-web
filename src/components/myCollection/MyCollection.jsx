@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 import { getLists } from "../../services/ComicService";
 import { getComics } from "../../services/ComicService";
 
-export default function MyCollection({id}) {
+
+export default function MyCollection() {
   const [lists, setLists] = useState([]);
   const [comics, setComics] = useState([]);
   const [error, setError] = useState(false);
@@ -37,6 +38,7 @@ export default function MyCollection({id}) {
     }
   }, [user]);
 
+
   const onListCreate = (list) => {
     setLists((old) => [...old, list]);
   };
@@ -45,7 +47,6 @@ export default function MyCollection({id}) {
     setLists((old) => [...old.filter((list) => list.id !== listId)]);
   };
   
-
   return (
     <div className="MyCollection">
       {user && (

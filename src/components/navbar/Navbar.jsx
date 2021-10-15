@@ -8,33 +8,35 @@ export default function Navbar() {
 
   return (
     <div>
-      <Link to="/" className="Navbar__logo">
-        <Logo />
-      </Link>
       <nav className="Navbar">
-        <ul className="Navbar__links">
-          {user ? (
-            <>
-              <li>
-                <Link to="/comics" className="Navbar__content__link">
-                  Comics
+        {user ? (
+          <>
+            <ul className="Navbar__links">
+              <div className="Navbar__container">
+                <Link to="/" className="Navbar__logo">
+                  <Logo />
                 </Link>
-              </li>
-              <li>
-                <Link to="/new" className="Navbar__content__link">
-                  New
-                </Link>
-              </li>
-              <li>
-                <Link to="/lists" className="Navbar__content__link">
-                  Lists
-                </Link>
-              </li>
-              <li>
-                <Link to="/mycollection" className="Navbar__content__link">
-                  My Collection
-                </Link>
-              </li>
+                <li>
+                  <Link to="/comics" className="Navbar__content__link">
+                    Comics
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new" className="Navbar__content__link">
+                    New
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/lists" className="Navbar__content__link">
+                    Lists
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/mycollection" className="Navbar__content__link">
+                    My Collection
+                  </Link>
+                </li>
+              </div>
               <li>
                 <button
                   className="Navbar__content__button"
@@ -44,22 +46,34 @@ export default function Navbar() {
                   Logout
                 </button>
               </li>
-            </>
-          ) : (
-            <>
-              <li>
-                <Link to="/comics" className="Navbar__content__link">
-                  Comics
+            </ul>
+          </>
+        ) : (
+          <>
+            <ul className="Navbar__links">
+              <div className="Navbar__container">
+                <Link to="/" className="Navbar__logo">
+                  <Logo />
                 </Link>
-              </li>
-              <li>
-                <Link to="/login" className="Navbar__content__link">
-                  Login
-                </Link>
-              </li>
-            </>
-          )}
-        </ul>
+                <li>
+                  <Link to="/comics" className="Navbar__content__link">
+                    Comics
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new" className="Navbar__content__link">
+                    New
+                  </Link>
+                </li>
+              </div>
+                <li>
+                  <Link to="/login" className="Navbar__content__link">
+                    Login
+                  </Link>
+                </li>
+            </ul>
+          </>
+        )}
       </nav>
     </div>
   );
